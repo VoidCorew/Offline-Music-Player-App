@@ -35,6 +35,23 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   http: ^1.4.0
+  permission_handler: ^12.0.1
+  device_info_plus: ^11.5.0
+  # on_audio_query: ^2.9.0
+  on_audio_query:
+    path: C:/Users/georg/Desktop/Flutter-Projects/on_audio_query/packages/on_audio_query
+  just_audio: ^0.10.4
+  provider: ^6.1.5
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+  flutter_launcher_icons: ^0.14.4
+  flutter_staggered_animations: ^1.1.1
+  animations: ^2.0.11
+  flutter_slidable: ^4.0.0
+  audio_service: ^0.18.18
+  audio_session: ^0.2.2
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +67,11 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/music.png"
+
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -59,8 +81,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -74,15 +96,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+  fonts:
+    - family: Exo2
+      fonts:
+        - asset: assets/fonts/Exo2-Regular.ttf
+    - family: Huninn
+      fonts:
+        - asset: assets/fonts/Huninn-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

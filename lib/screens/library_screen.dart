@@ -6,8 +6,15 @@ class LibraryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Библиотека')),
-      body: Center(child: const Text('Библиотека')),
+      appBar: AppBar(
+        title: const Text('Библиотека', style: TextStyle(fontFamily: 'Exo2')),
+      ),
+      body: Center(
+        child: const Text(
+          'Пока в разработке',
+          style: TextStyle(fontFamily: 'Huninn'),
+        ),
+      ),
     );
   }
 }
