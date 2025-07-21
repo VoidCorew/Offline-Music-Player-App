@@ -6,6 +6,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 import 'package:piped_music_player/screens/songs_screen.dart';
 import 'package:piped_music_player/screens/library_screen.dart';
+import 'package:piped_music_player/screens/music_screen.dart';
 import 'package:piped_music_player/services/audio_player_handler.dart';
 
 class MainNavigation extends StatefulWidget {
@@ -146,26 +147,30 @@ class _MainNavigationState extends State<MainNavigation> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> _screens = [
-      SongsScreen(
-        audioPlayer: _audioPlayer,
-        // audioHandler: widget.audioHandler,
-        songModel: _currentSong,
-        isPlaying: _isPlaying,
-        onSongSelected: playSong,
-        togglePlayPause: togglePlayPause,
-      ),
+      // SongsScreen(
+      //   audioPlayer: _audioPlayer,
+      //   // audioHandler: widget.audioHandler,
+      //   songModel: _currentSong,
+      //   isPlaying: _isPlaying,
+      //   onSongSelected: playSong,
+      //   togglePlayPause: togglePlayPause,
+      // ),
+      MusicScreen(),
       LibraryScreen(),
     ];
 
     return Scaffold(
       body: _screens[_currentScreenIndex],
-      bottomNavigationBar: NavigationBar(
-        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-        indicatorColor: Colors.indigo,
-        selectedIndex: _currentScreenIndex,
-        destinations: _destinations,
-        onDestinationSelected: (index) =>
-            setState(() => _currentScreenIndex = index),
+      bottomNavigationBar: SizedBox(
+        height: 80,
+        child: NavigationBar(
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+          indicatorColor: Colors.indigo,
+          selectedIndex: _currentScreenIndex,
+          destinations: _destinations,
+          onDestinationSelected: (index) =>
+              setState(() => _currentScreenIndex = index),
+        ),
       ),
     );
   }
